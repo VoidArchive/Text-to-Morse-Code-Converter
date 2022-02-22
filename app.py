@@ -8,10 +8,11 @@ print("""___________              __      __              _____                 
   |____| \___  >__/\_ \ |__|    |__|  \____/  \____|__  /\____/|__|  /____  >\___  >  \___  >____/\____ |\___  >
              \/      \/                               \/                  \/     \/       \/           \/    \/ """)
 
-user_input = input("Write down the text you want to convert: ").lower().split()
+user_input = input("Write down the text you want to convert: ")
 
 def convert_to_morse(text):
     morse_code = ""
+    text = text.lower().split()
     for word in text:
         for character in word:
             morse_code += data.morse_code[character] + " "
